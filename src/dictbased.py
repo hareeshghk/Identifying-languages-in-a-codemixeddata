@@ -1,7 +1,8 @@
 import numpy as np
 import re
-file=open("file.txt")
+file=open("../data/hineng.txt")
 data = file.readlines()
+print len(data)
 train_data=data[:17109]
 test_data = data[17109:]
 result_data=[]
@@ -73,3 +74,4 @@ for line in test_data:
 			error+=1
 		k+=1
 print "\nerror percentage : " ,error*100.0/len(result_data) 
+print "Accuracy : ",100-(error*100.0/len(result_data))
